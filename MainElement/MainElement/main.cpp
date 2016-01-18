@@ -23,18 +23,10 @@ int findMainElement(vector<int> &v){
 			u.push_back(v[i]);
 	}
 	int res = findMainElement(u);
-	if (v.size() % 2 == 0)
+	if (v.size() % 2 != 0 && res == -1 && isMainElement(v))
+		return v.back();
+	else 
 		return res;
-	else{
-		if (res == -1){
-			if (isMainElement(v))
-				return v.back();
-			else
-				return -1;
-		}
-		else
-			return res;
-	}
 }
 
 int main(void){
