@@ -79,10 +79,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="list.h" />
+    <ClInclude Include="ListNode.h" />
+    <ClInclude Include="ListNode_implementation.h" />
+    <ClInclude Include="List_implenmentation.h" />
+    <ClInclude Include="polynomial.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="list.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="polynomial.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

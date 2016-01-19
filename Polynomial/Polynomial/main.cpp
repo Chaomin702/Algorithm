@@ -1,14 +1,16 @@
-#include <stdio.h>
-#include "list.h"
+#include <iostream>
+#include "polynomial.h"
 
 int main(void){
-	List L = EmptyList();
-	Insert(1, L, First(L));
-	Insert(2, L, First(L));
-	Insert(3, L, First(L));
-	Insert(4, L, First(L));
-	Position V = Find(3, L);
-	Delete(3, L);
-	V = Find(3, L);
+	//Poly P;
+	//P.addTerm(std::pair<int, int>(1, 1));
+	//P.addTerm(std::pair<int, int>(2, 2));
+	List<int> L;
+	L.insertAsFirst(5);
+	L.insertAsLast(4);
+	L.insertAsLast(3);
+	L.insertAsLast(2);
+	L.insertAsLast(1);
+	L.mergeSort(L.first(), 5);
 	return 0;
 }
