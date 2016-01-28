@@ -95,7 +95,7 @@ template <typename T>
 void List<T>::mergeSort(ListNodePosi(T) &p, int n){
 	if (n < 2)return;
 	int m = n / 2;
-	ListNodePosi(T) q;
+	ListNodePosi(T) q = p;;
 	for (int i = 0; i<m; i++)
 		q = q->succ;
 	mergeSort(p, m);
@@ -112,8 +112,8 @@ void List<T>::merge(ListNodePosi(T) &p, int n, List<T> &L, ListNodePosi(T) &q, i
 		}else{
 			q = q->succ;
 			L.insertBefore(p, L.remove(q->pred));
-			n--;
+			m--;
 		}
 	}
-
+	p = pp->succ;
 }

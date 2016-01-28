@@ -11,6 +11,7 @@ int main(void){
 	L.insertAsLast(3);
 	L.insertAsLast(2);
 	L.insertAsLast(1);
-	L.mergeSort(L.first(), 5);
+	ListNodePosi(int) p = L.first();
+	L.mergeSort(p, 5);
 	return 0;
 }
